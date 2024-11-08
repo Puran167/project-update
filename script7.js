@@ -27,7 +27,7 @@ function validateLoginForm() {
     for (var i = 0; i < users.length; i++) {
         if (users[i].username === username && users[i].password === password) {
             // If a match is found, redirect to a different page (e.g., dashboard)
-            window.location.href = "index.html";  // Change this to the page you want to redirect to
+            window.location.href = "login.html";  // Change this to the page you want to redirect to
             userFound = true;
             break;
         }
