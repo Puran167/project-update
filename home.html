@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator - Home</title>
+    
+    <link rel="stylesheet" href="main.css">
+   
+    <link rel="icon" href="./images/dumble.png" type="image/x-icon">
+    <script defer src="script.js"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+      <div id="preloader"></div>
+    <div class="nav">  
+             <nav>
+            <div class="logo">
+              <img src="./images/icon.png" alt="logo">
+              <h1>BMI FITNESS</h1>
+            </div>
+            <ul>
+              <li>
+                <a href="home.html">HOME</a>
+              </li>
+              <li>
+                <a href="services.html">SERVICES</a>
+              </li>
+              <li>
+                <a href="malediet.html">FEMALE DIET PLAN</a>
+              </li>
+              <li>
+                <a href="diet-plan-female.html">MALE DIET PLAN</a>
+              </li>
+              <li>
+                <a href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+            <div class="hamburger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </nav>
+          <div class="menubar">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>      
+    </div></div>
+
+
+    <div class="blue-shape"></div>
+    <div class="hero-section">
+        <div class="text-side">
+            <a href="#" id="logo"><img src="./images/dumble.png" alt=""></a>
+            <h1>BODY MASS INDEX CALCULATOR</h1>
+            <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. 
+                While BMI is not the sole determinant of a healthy weight, 
+                it offers a valuable starting point to evaluate your overall health and well-being.</p>
+        </div>
+
+        <div class="form-side" id="form-side">
+            <h3>ENTER YOUR DETAILS BELOW </h3>
+            <form class="radios">
+                <div class="container">
+                    <input type="radio" id="Metric" value="Metric" name="radio-value" checked>
+                    <label class="label-radio" for="Metric">METRIC</label>
+                </div>
+                <div class="container">
+                    <input type="radio" id="Imperial" value="Imperial" name="radio-value">
+                    <label class="label-radio" for="Imperial">IMPERIAL</label>
+                </div>
+            </form>
+
+            <form class="metric-unit" id="metric-unit">
+                <div class="metric-container">
+                    <label class="lab-unit" for="m-height">HEIGHT</label>
+                    <input type="number" name="metric-value" id="m-height" placeholder="0">
+                    <span class="unit">cm</span>
+                </div>
+                <div class="metric-container">
+                    <label class="lab-unit" for="m-weight">WEIGHT</label>
+                    <input type="number" name="metric-value" id="m-weight" placeholder="0">
+                    <span class="unit">kg</span>
+                </div>
+            </form>
+
+            <form class="imperial-unit">
+                <div class="imp-container">
+                    <label class="lab-unit" for="ft">HEIGHT</label>
+                    <div class="field-imp">
+                        <div>
+                            <input type="number" class="Height" name="imperial-value" placeholder="0" id="ft">
+                            <span class="unit ft">ft</span>
+                        </div>
+                        <div>
+                            <input type="number" class="Height" placeholder="0" name="imperial-value" id="inch">
+                            <span class="unit in">in</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="imp-container">
+                    <label class="lab-unit" for="st">WEIGHT</label>
+                    <div class="field-imp">
+                        <div>
+                            <input type="number" name="imperial-value" class="Weight" placeholder="0" id="st">
+                            <span class="unit st">st</span>
+                        </div>
+                        <div>
+                            <input type="number" name="imperial-value" class="Weight" placeholder="0" id="lbs">
+                            <span class="unit lbs">lbs</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="result">
+                <div class="welcome" id="welcome">
+                    <h3>WELCOME!</h3>
+                    <p>Enter your height and weight and you’ll see your BMI result here</p>
+                </div>
+                <div class="result-number" id="result-numb">
+                    <p id="your-BMI">Your BMI is...</p>
+                    <span id="result-BMI">00</span>
+                </div>
+                <div class="result-body-cont" id="result-body">
+                    <p id="result-body">Your BMI suggests you’re a <span id="range-bmi">healthy weight</span>. Your ideal weight is between <span id="result-min-weight">9st 6lbs</span>  - 
+                    <span id="result-max-weight">12st 10lbs.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+            
+          <section class="cta">
+        <h1>FEMALE DIET FITNESS PLAN </h1>
+        <a href="malediet.html" class="hero-btn">EXPLORE MORE</a>
+        
+    </section>
+    <section class="cta-2">
+        <h1>MALE DIET FITNESS PLAN </h1>
+        <a href="diet-plan-female.html" class="hero-btn">EXPLORE MORE</a>
+        
+    </section>
+ 
+    
+  
+  
+  
+
+    <section class="vedio">
+        <center><h1>| WHAT IS BMI? | WHAT BMI DOESN'T TELL YOU ABOUT YOUR HEALTH? |</h1></center>
+        <br>
+       <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/ts3zesSyGDI?si=_dEikvESNIM1U69n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/z_3S2_41_FE?si=_UI7H-3-DLicyQjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center></section>
+       </section>
+    </main>
+
+    <footer>
+        <div class="f-item-con">
+            <div class="app-info">
+                <span class='app-name'>
+                    <span class='app-initial'>BMI</span> FITNESS
+                </span>
+                <p>Everybody Worry about their <strong>EMI</strong>but
+                    I'm Worry about my <strong>BMI</strong></p>
+            </div>
+            <div class="useful-links">
+                <div class="footer-title">Useful Links</div>
+                <ul>
+                    <li>Sign In</li>
+                    <li>About Us</li>
+                    <li>Male Diet Plan</li>
+                    <li>Female Diet Plan</li>
+                    <li>Terms and Conditions</li>
+                </ul>
+            </div>
+            <div class="help-sec">
+                <div class="footer-title">Help</div>
+                <ul>
+                    <li>Help Me</li>
+                    <li>Feedback</li>
+                    <li>Report a Issue / Bug</li>
+                </ul>
+            </div>
+            <div class="g-i-t">
+                <div class="footer-title">Get in Touch</div>
+                <form action="https://api.web3forms.com/submit" method="post" class="space-y-2">
+                    <input type="hidden" name="access_key" value="2d0f22e5-c5a9-4c11-82db-b1d62a55c30e">
+                    <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Name' />
+                    <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
+                    <textarea type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+                        placeholder='Message...'></textarea>
+                    <button type="submit" class='f-btn'>Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class='cr-con'>Copyright &copy; 2024 | Made by PURU FITNESS</div>
+    </footer>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load",function(){
+        loader.style.display="none";
+      })
+    </script>
+    
+    
+
+</body></html>
+
+

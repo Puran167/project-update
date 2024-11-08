@@ -1,0 +1,185 @@
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff1493); /* Vibrant gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container for the login form */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(-30px);
+    animation: slideUp 0.5s ease-out;
+    transition: transform 0.3s ease;
+}
+
+/* Heading styles */
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.input-group input:focus {
+    outline: none;
+    border-color: #ff1493; /* Vibrant pink focus color */
+    background-color: #fff;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff7f50; /* Vibrant coral button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff6347;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #e53e3e;
+    transform: translateY(2px);
+}
+
+/* Error message styling */
+#error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Animation for the form */
+@keyframes slideUp {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Social Media Buttons Styling */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.social-buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.social-buttons .google {
+    background-color: #db4437; /* Google Red */
+}
+
+.social-buttons .facebook {
+    background-color: #3b5998; /* Facebook Blue */
+}
+
+.social-buttons .instagram {
+    background-color: #e1306c; /* Instagram Pink */
+}
+
+.social-buttons a i {
+    font-size: 20px;
+    color: white;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+        width: 80%;
+        max-width: 350px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .input-group input,
+    button {
+        padding: 10px;
+    }
+}

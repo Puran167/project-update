@@ -1,0 +1,293 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-family: Helvetica, sans-serif;
+  background: #ff7f50; /* Optional: Set background for better look */
+}
+
+/* Main container */
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Card styles */
+.item {
+  width: 200px;
+  height: 300px;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+}
+
+/* Position and size of items on large screens */
+.item:nth-child(1), 
+.item:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 1;
+}
+
+.item:nth-child(3) { left: 50%; }
+.item:nth-child(4) { left: calc(50% + 220px); }
+.item:nth-child(5) { left: calc(50% + 440px); }
+.item:nth-child(6) { left: calc(50% + 660px); opacity: 0; }
+
+/* Content inside the item */
+.content {
+  width: min(30vw, 400px);
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  font: 400 0.85rem helvetica, sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+}
+
+.content .title {
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+.content .description {
+  line-height: 1.7;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.8rem;
+}
+
+.content button {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.item:nth-of-type(2) .content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Navigation buttons */
+.nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+}
+
+.nav .btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Media Queries for Android and iPhone responsiveness */
+
+/* iPhone (iPhone 5, 6, 7, 8, SE) - Small screens */
+@media (max-width: 600px) {
+  body {
+    background: #ff7f50;
+  }
+
+  .item {
+    width: 130px;
+    height: 200px;
+  }
+
+  .content {
+    left: 2rem;
+    width: 80%;
+  }
+
+  .content .title {
+    font-size: 0.8rem;
+  }
+
+  .content .description {
+    font-size: 0.65rem;
+  }
+
+  .content button {
+    font-size: 0.6rem;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 140px); }
+  .item:nth-child(5) { left: calc(50% + 280px); }
+  .item:nth-child(6) { left: calc(50% + 420px); opacity: 0; }
+
+  .nav .btn {
+    padding: 0.5rem;
+  }
+}
+
+/* iPhone X, iPhone 11, iPhone 12, iPhone 13 - Medium screens */
+@media (max-width: 800px) and (min-width: 601px) {
+  .item {
+    width: 150px;
+    height: 250px;
+  }
+
+  .content {
+    left: 2.5rem;
+    width: 80%;
+  }
+
+  .content .title {
+    font-size: 0.9rem;
+  }
+
+  .content .description {
+    font-size: 0.7rem;
+  }
+
+  .content button {
+    font-size: 0.7rem;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 160px); }
+  .item:nth-child(5) { left: calc(50% + 320px); }
+  .item:nth-child(6) { left: calc(50% + 480px); opacity: 0; }
+
+  .nav .btn {
+    padding: 0.75rem;
+  }
+}
+
+/* Android Small/Medium screens (Less than 800px) */
+@media (max-width: 800px) and (min-width: 600px) {
+  .item {
+    width: 150px;
+    height: 250px;
+  }
+
+  .content {
+    left: 2rem;
+    width: 80%;
+  }
+
+  .content .title {
+    font-size: 0.9rem;
+  }
+
+  .content .description {
+    font-size: 0.7rem;
+  }
+
+  .content button {
+    font-size: 0.7rem;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 160px); }
+  .item:nth-child(5) { left: calc(50% + 320px); }
+  .item:nth-child(6) { left: calc(50% + 480px); opacity: 0; }
+
+  .nav .btn {
+    padding: 0.75rem;
+  }
+}
+
+/* Large Android and iPhone (Tablets and larger phones, 800px - 1200px) */
+@media (max-width: 1200px) and (min-width: 801px) {
+  .item {
+    width: 180px;
+    height: 280px;
+  }
+
+  .content {
+    left: 3rem;
+    width: 70%;
+  }
+
+  .content .title {
+    font-size: 1rem;
+  }
+
+  .content .description {
+    font-size: 0.8rem;
+  }
+
+  .content button {
+    font-size: 0.8rem;
+  }
+
+  .item:nth-child(3) { left: 50%; }
+  .item:nth-child(4) { left: calc(50% + 180px); }
+  .item:nth-child(5) { left: calc(50% + 360px); }
+  .item:nth-child(6) { left: calc(50% + 540px); opacity: 0; }
+
+  .nav .btn {
+    padding: 1rem;
+  }
+}
+
+/* Hero button styling */
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  transition: 1s;
+}
